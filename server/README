@@ -1,0 +1,15 @@
+Set up server
+
+1. Install golang: https://go.dev/doc/install
+2. Install openAPI stub generator
+    - export PATH="$PATH:$(go env GOPATH)/bin"
+    - go install github.com/deepmap/oapi-codegen/cmd/oapi-codegen@latest
+3. mkdir src/code.ply.internal/gen
+
+Run
+
+docker run -d --name mongodb -p 27017:27017 mongo:latest
+cd spec
+oapi-codegen --config=config.yaml api.yaml
+cd ../src/code.ply.internal
+PLY_ENV=test go run main.go

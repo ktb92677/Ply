@@ -1,0 +1,18 @@
+get:
+  summary: "List providers"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  responses:
+    '200':
+      description: "List of providers"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              providers:
+                type: array
+                items:
+                  $ref: "../../../schemas/provider.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

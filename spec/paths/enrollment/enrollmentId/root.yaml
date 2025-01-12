@@ -1,0 +1,37 @@
+get:
+  summary: "Read a enrollment"
+  parameters:
+    - $ref: "../../../parameters/enrollmentId.yaml"
+  responses:
+    '200':
+      description: "read enrollment"
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemas/enrollment.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+post:
+  summary: "Update a enrollment"
+  parameters:
+    - $ref: "../../../parameters/enrollmentId.yaml"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/enrollment.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+delete:
+  summary: "Delete a enrollment"
+  parameters:
+    - $ref: "../../../parameters/enrollmentId.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

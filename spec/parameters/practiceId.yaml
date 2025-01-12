@@ -1,0 +1,5 @@
+name: practiceId
+in: path
+required: true
+schema:
+  type: string

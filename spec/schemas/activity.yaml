@@ -1,0 +1,8 @@
+type: object
+properties:
+  activityId:
+    type: string
+  enrollmentId:
+    type: string
+  message:
+    type: string

@@ -1,0 +1,12 @@
+type: object
+required:
+  - file
+  - fileName
+properties:
+  file:
+    type: string
+    format: binary
+    description: The document file to upload
+  fileName:
+    type: string
+    description: The original name of the file being uploaded

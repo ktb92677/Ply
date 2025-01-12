@@ -1,0 +1,37 @@
+get:
+  summary: "Read a provider"
+  parameters:
+    - $ref: "../../../parameters/providerId.yaml"
+  responses:
+    '200':
+      description: "read provider"
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemas/provider.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+post:
+  summary: "Update a provider"
+  parameters:
+    - $ref: "../../../parameters/providerId.yaml"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/provider.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+delete:
+  summary: "Delete a provider"
+  parameters:
+    - $ref: "../../../parameters/providerId.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

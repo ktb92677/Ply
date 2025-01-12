@@ -1,0 +1,20 @@
+post:
+  summary: "Create a provider"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/provider.yaml"
+  responses:
+    '200':
+      description: "Provider created"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              providerId:
+                type: string
+    '500':
+      $ref: "../../responses/internalServerError.yaml"

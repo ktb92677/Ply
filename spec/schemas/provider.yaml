@@ -1,0 +1,10 @@
+type: object
+properties:
+  providerId:
+    type: string
+  practiceId:
+    type: string
+  name:
+    type: string
+  ssn:
+    type: string

@@ -1,0 +1,18 @@
+get:
+  summary: "List activities"
+  parameters:
+    - $ref: "../../../parameters/enrollmentId.yaml"
+  responses:
+    '200':
+      description: "List of activities"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              activities:
+                type: array
+                items:
+                  $ref: "../../../schemas/activity.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

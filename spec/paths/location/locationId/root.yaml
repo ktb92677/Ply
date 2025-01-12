@@ -1,0 +1,37 @@
+get:
+  summary: "Read a location"
+  parameters:
+    - $ref: "../../../parameters/locationId.yaml"
+  responses:
+    '200':
+      description: "read location"
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemas/location.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+post:
+  summary: "Update a location"
+  parameters:
+    - $ref: "../../../parameters/locationId.yaml"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/location.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+delete:
+  summary: "Delete a location"
+  parameters:
+    - $ref: "../../../parameters/locationId.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

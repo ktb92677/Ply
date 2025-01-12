@@ -1,0 +1,20 @@
+post:
+  summary: "Create a location"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/location.yaml"
+  responses:
+    '200':
+      description: "Location created"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              locationId:
+                type: string
+    '500':
+      $ref: "../../responses/internalServerError.yaml"

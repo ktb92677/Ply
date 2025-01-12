@@ -1,0 +1,18 @@
+type: object
+properties:
+  enrollmentId:
+    type: string
+  practiceId:
+    type: string
+  state:
+    type: string
+  payer:
+    type: string
+  status:
+    type: string
+  locationId:
+    type: string
+  type:
+    type: string
+  providerId:
+    type: string

@@ -1,0 +1,4 @@
+# run the generator
+
+docker build -t pdf-processing .
+docker run --rm -v "$(pwd)/main.pdf:/app/main.pdf" pdf-processing

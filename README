@@ -1,0 +1,4 @@
+# How do I run this thing?
+
+docker-compose up
+navigate to localhost:8888

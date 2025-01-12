@@ -1,0 +1,10 @@
+type: object
+properties:
+  taskId:
+    type: string
+  practiceId:
+    type: string
+  message:
+    type: string
+  status:
+    type: string

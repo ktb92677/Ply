@@ -1,0 +1,16 @@
+get:
+  summary: "List practices"
+  responses:
+    '200':
+      description: "List of activities"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              practices:
+                type: array
+                items:
+                  $ref: "../../schemas/practice.yaml"
+    '500':
+      $ref: "../../responses/internalServerError.yaml"

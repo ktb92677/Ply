@@ -1,0 +1,15 @@
+post:
+  summary: "Update a task"
+  parameters:
+    - $ref: "../../../parameters/taskId.yaml"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/task.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

@@ -1,0 +1,13 @@
+service:
+  port: 5005
+
+mongo:
+  url: "mongodb://mongodb:27017"
+  database: "ply"
+  activityCollection: "activity"
+  enrollmentCollection: "enrollment"
+  locationCollection: "location"
+  practiceCollection: "practice"
+  providerCollection: "provider"
+  taskCollection: "task"
+  documentCollection: "document"

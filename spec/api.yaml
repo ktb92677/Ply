@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: Ply Health API
+  version: 1.0.0
+paths:
+  /v1/ply/practice:
+    $ref: './paths/practice/root.yaml'
+  /v1/ply/practice/list:
+    $ref: './paths/practice/list.yaml'
+  /v1/ply/practice/{practiceId}:
+    $ref: './paths/practice/practiceId/root.yaml'
+  /v1/ply/practice/{practiceId}/location:
+    $ref: './paths/practice/practiceId/location.yaml'
+  /v1/ply/practice/{practiceId}/provider:
+    $ref: './paths/practice/practiceId/provider.yaml'
+  /v1/ply/practice/{practiceId}/task:
+    $ref: './paths/practice/practiceId/task.yaml'
+  /v1/ply/practice/{practiceId}/enrollment:
+    $ref: './paths/practice/practiceId/enrollment.yaml'
+  /v1/ply/practice/{practiceId}/document:
+    $ref: './paths/practice/practiceId/document.yaml'
+  /v1/ply/practice/{practiceId}/upload:
+    $ref: './paths/practice/practiceId/upload.yaml'
+  /v1/ply/document/{documentId}:
+    $ref: './paths/document/documentId/root.yaml'
+  /v1/ply/location:
+    $ref: './paths/location/root.yaml'
+  /v1/ply/location/{locationId}:
+    $ref: './paths/location/locationId/root.yaml'
+  /v1/ply/provider:
+    $ref: './paths/provider/root.yaml'
+  /v1/ply/provider/{providerId}:
+    $ref: './paths/provider/providerId/root.yaml'
+  /v1/ply/task/{taskId}:
+    $ref: './paths/task/taskId/root.yaml'
+  /v1/ply/enrollment:
+    $ref: './paths/enrollment/root.yaml'
+  /v1/ply/enrollment/{enrollmentId}:
+    $ref: './paths/enrollment/enrollmentId/root.yaml'
+  /v1/ply/enrollment/{enrollmentId}/activity:
+    $ref: './paths/enrollment/enrollmentId/activity.yaml'

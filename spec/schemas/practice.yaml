@@ -1,0 +1,10 @@
+type: object
+properties:
+  practiceId:
+    type: string
+  name:
+    type: string
+  ein:
+    type: string
+  owner_name:
+    type: string

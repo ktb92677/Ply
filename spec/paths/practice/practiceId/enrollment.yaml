@@ -1,0 +1,18 @@
+get:
+  summary: "List enrollments"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  responses:
+    '200':
+      description: "List of enrollments"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              enrollments:
+                type: array
+                items:
+                  $ref: "../../../schemas/enrollment.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

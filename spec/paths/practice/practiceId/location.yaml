@@ -1,0 +1,18 @@
+get:
+  summary: "List locations"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  responses:
+    '200':
+      description: "List of locations"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              locations:
+                type: array
+                items:
+                  $ref: "../../../schemas/location.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

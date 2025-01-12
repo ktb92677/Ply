@@ -1,0 +1,23 @@
+post:
+  summary: Upload a document for a practice
+  description: Upload a document and associate it with a specific practice
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  requestBody:
+    required: true
+    content:
+      multipart/form-data:
+        schema:
+          $ref: '../../../schemas/uploadRequest.yaml'
+  responses:
+    '200':
+      description: "Document created"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              documentId:
+                type: string
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

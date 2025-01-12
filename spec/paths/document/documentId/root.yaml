@@ -1,0 +1,24 @@
+get:
+  summary: Get a document by ID
+  description: Retrieve a document by its ID. Returns the actual file content.
+  parameters:
+    - $ref: "../../../parameters/documentId.yaml"
+  responses:
+    '200':
+      description: "Document file content"
+      content:
+        '*/*':
+          schema:
+            type: string
+            format: binary
+    '500':
+      $ref: "../../../responses/internalServerError.yaml" 
+delete:
+  summary: "Delete a document"
+  parameters:
+    - $ref: "../../../parameters/documentId.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml" 

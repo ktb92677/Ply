@@ -1,0 +1,18 @@
+get:
+  summary: "List tasks"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  responses:
+    '200':
+      description: "List of tasks"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              tasks:
+                type: array
+                items:
+                  $ref: "../../../schemas/task.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

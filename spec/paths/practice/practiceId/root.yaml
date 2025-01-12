@@ -1,0 +1,28 @@
+get:
+  summary: "Read a practice"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  responses:
+    '200':
+      description: "read practice"
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemas/practice.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"
+post:
+  summary: "Update a practice"
+  parameters:
+    - $ref: "../../../parameters/practiceId.yaml"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../../schemas/practice.yaml"
+  responses:
+    '200':
+      $ref: "../../../responses/default.yaml"
+    '500':
+      $ref: "../../../responses/internalServerError.yaml"

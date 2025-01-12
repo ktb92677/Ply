@@ -1,0 +1,20 @@
+post:
+  summary: "Create a practice"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/practice.yaml"
+  responses:
+    '200':
+      description: "Practice created"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              practiceId:
+                type: string
+    '500':
+      $ref: "../../responses/internalServerError.yaml"

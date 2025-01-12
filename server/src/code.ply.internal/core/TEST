@@ -1,0 +1,43 @@
+# 1. Create a new practice (foundational operation)
+curl -X POST http://localhost:5005/v1/ply/practice \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Test Practice",
+    "ein": "1234567890",
+    "owner_name": "John"
+  }'
+
+# 2. Create a provider for the practice
+curl -X POST http://localhost/v1/ply/provider \
+  -H "Content-Type: application/json" \
+  -d '{
+    "practiceId": "{practiceId}",
+    "name": "John",
+    "ssn": "1234567890"
+  }'
+
+# 3. Create a location for the practice
+curl -X POST http://localhost/v1/ply/location \
+  -H "Content-Type: application/json" \
+  -d '{
+    "practiceId": "{practiceId}",
+    "address": "123 Main St"
+  }'
+
+# 4. Create an enrollment
+curl -X POST http://localhost/v1/ply/enrollment \
+  -H "Content-Type: application/json" \
+  -d '{
+    "practiceId": "{practiceId}",
+    "state": "TX",
+    "providerId": "{providerId}",
+    "payer": "BCBS",
+    "locationId": "{locationId}",
+    "status": "pending"
+  }'
+
+# 5. Check enrollment status and activities
+curl -X GET http://localhost/v1/ply/enrollment/{enrollmentId}/activity
+
+# 6. List all providers for a practice (verification)
+curl -X GET http://localhost/v1/ply/practice/7904a04e-293b-4be5-8cef-2f5cd4b4f91d/provider

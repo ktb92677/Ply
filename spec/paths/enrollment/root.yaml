@@ -1,0 +1,20 @@
+post:
+  summary: "Create an enrollment"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/enrollment.yaml"
+  responses:
+    '200':
+      description: "Enrollment created"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              enrollmentId:
+                type: string
+    '500':
+      $ref: "../../responses/internalServerError.yaml"

@@ -1,0 +1,8 @@
+type: object
+properties:
+  locationId:
+    type: string
+  practiceId:
+    type: string
+  address:
+    type: string
